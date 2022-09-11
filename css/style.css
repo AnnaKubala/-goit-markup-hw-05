@@ -36,7 +36,6 @@ body {
 
 .main {
   display: block;
-
   height: 2017px;
 }
 
@@ -56,11 +55,10 @@ figure {
   height: 80px;
   padding-left: 200px;
   padding-right: 200px;
-  padding-top: 24px;
   padding-bottom: 25px;
   background: var(--main-color);
-
   border-bottom: 1px solid var(--border-color);
+  position: absolute;
 }
 
 .menu_nav {
@@ -89,17 +87,10 @@ figure {
   color: var(--second-color);
 }
 
-.navigation a {
-  display: inline-flex;
-  text-decoration: none;
-  color: var(--text-color);
-}
 
 .navigation {
   display: flex;
-
   gap: 46px;
-
   align-items: center;
   font-family: "Roboto";
   font-style: normal;
@@ -107,6 +98,14 @@ figure {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  height: 80px;
+  position: relative;
+}
+
+.navigation a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .navigation__agencja {
@@ -143,9 +142,9 @@ figure {
 }
 
 
+
 .contact {
   display: inline-flex;
-
   padding-left: 315px;
   justify-content: center;
   align-items: center;
@@ -195,11 +194,17 @@ figure {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.active__link:hover {
-  color: var(--brand-color);
-  text-decoration: none;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.active__link::after {
+  content: "";
+  position: absolute;
+  width: 53px;
+  border-bottom: 4px solid var(--brand-color);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding-top: 44px;
+  display: block;
 }
 
 ul {
