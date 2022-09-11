@@ -138,6 +138,8 @@ figure {
   color: var(--brand-color);
   fill: var(--brand-color);
   cursor: pointer;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -189,11 +191,15 @@ figure {
   text-decoration: none;
   color: var(--brand-color);
   fill: var(--brand-color);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active__link:hover {
   color: var(--brand-color);
   text-decoration: none;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ul {
@@ -369,6 +375,36 @@ ul {
 .box {
   width: 370px;
   margin-right: 30px;
+  position: relative;
+
+}
+
+.label__our-work {
+  width: 370px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--main-color);
+  position: relative;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  bottom: 48px;
+
+}
+
+.label_position-1 {
+  padding: 27px 90px;
+}
+
+.label_position-2 {
+  padding: 27px 112.9px;
+}
+
+.label_position-3 {
+  padding: 27px 94px;
 }
 
 .our__team {
@@ -503,7 +539,9 @@ ul {
   background-repeat: no-repeat;
   background-color: var(--brand-color);
   fill: var(--main-color);
-  transition: 0.3s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social__media-icon:focus-within svg {
@@ -540,7 +578,7 @@ ul {
 .client_box {
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(-fill-color);
   border-radius: 4px;
   background-color: var(--main-color);
   fill: var(--fill-color);
@@ -555,6 +593,8 @@ ul {
   background-color: var(--main-color);
   fill: var(--brand-color);
   cursor: pointer;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-group-1 {
@@ -708,7 +748,8 @@ ul {
   background-repeat: no-repeat;
   background-color: var(--brand-color);
   fill: var(--main-color);
-  transition: 0.3s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
@@ -737,6 +778,8 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-1 {
@@ -822,6 +865,8 @@ ul {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .figcaption {
