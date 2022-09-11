@@ -300,6 +300,12 @@ ul {
   height: 100%;
   position: fixed;
   z-index: 1;
+  transform: scale(1) translate(0,0);
+  transition-property: transform, opacity;
+  transition-duration: 1500ms;
+  transition-delay: 100ms;
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal_window {
@@ -311,6 +317,8 @@ ul {
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+
 }
 
 .btn_close {
@@ -322,6 +330,9 @@ ul {
 .is-hidden {
   display: none;
   visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0) translate(500px, 500px);
 }
 
 .features_list {
