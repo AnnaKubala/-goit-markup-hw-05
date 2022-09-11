@@ -861,8 +861,10 @@ ul {
 .project_box {
   padding: 0;
   width: 370px;
-
+  height: 404px;
   border: 1px solid var(--border-2-color);
+  position: relative;
+  overflow: hidden;
 }
 
 .project_box:hover,
@@ -874,9 +876,40 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.box__overlay {
+  width: 100%;
+  height: 75%;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  transform: translate(0, 100%);
+
+}
+
+.box__overlay>p {
+  color: var(--main-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  padding: 49px 45px 49px 24px;
+}
+
+.project_box:hover .box__overlay {
+  display: flex;
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition-property: transform, background-color, color;
+  transform: translate(0, 0);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
 .figcaption {
   display: block;
   width: 370px;
+
 }
 
 .project__figcaption_title {
