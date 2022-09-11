@@ -91,11 +91,15 @@
     </header>
 
     <main>
+       <div class="modal is-hidden" data-modal>
+        <div class="modal_window">
+        <button class=btn_close data-modal-close>Close</button></div>
+       </div>
       <section class="h1__bg">
         <section class="h1 container">
           <div>
             <h1 class="h1__text">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-            <button class="order" type="button">Zamów usługę</button>
+            <button data-modal-open class="order" type="button" >Zamów usługę</button>
           </div>
         </section>
       </section>
