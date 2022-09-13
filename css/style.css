@@ -12,6 +12,7 @@
   --filters-color: #f5f4fa;
   --border-2-color: #eeeeee;
   --fill-color: #afb1b8;
+  --bg-overlay-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -293,8 +294,8 @@ ul {
   position: fixed;
   z-index: 1;
   transform: scale(1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms linear,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   visibility: visible;
   opacity: 1;
@@ -307,8 +308,7 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -330,13 +330,11 @@ ul {
 }
 
 .is-hidden {
-  display: none;
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: scale(0);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 
@@ -923,7 +921,7 @@ ul {
   transform: translate(0, 100%);
   transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform, background-color, color;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--bg-overlay-color);
 }
 
 .box__overlay>p {
