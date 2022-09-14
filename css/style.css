@@ -785,7 +785,7 @@ ul {
   fill: var(--main-color);
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill, bachground-color transition;
+  transition-property: fill, background-color;
 }
 
 .social__footer-icon:hover svg,
@@ -821,6 +821,12 @@ ul {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transition, background-color, color, box-shadow;
+}
+
+.filters__active {
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color, box-shadow;
 }
 
 .filters__active:hover,
